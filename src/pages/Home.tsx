@@ -26,8 +26,13 @@ export function Home() {
       id: String(new Date().getTime()),
       name: newSkill
     }
-
     setMySkills(oldState => [...oldState, data]);
+  }
+
+  function handleRemoveSkill(id: string) {
+    setMySkills(oldState => oldState.filter(
+      skill => skill.id !== id
+    ));
   }
 
   useEffect(() => {
@@ -73,10 +78,12 @@ export function Home() {
         data={mySkills}
         keyExtractor={item => item.id}
         renderItem={({ item }) => (
-          <SkillCard skill={item.name} />
+          <SkillCard 
+            skill={item.name} 
+            onPress={() => handleRemoveSkill(item.id)}
+          />
         )}
       />
-
     </View>
 
   )
