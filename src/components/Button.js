@@ -6,15 +6,15 @@ import {
 } from 'react-native';
 
 export function Button({ onPress }) {
-    return (
-        <TouchableOpacity 
-        style={styles.button}
-        activeOpacity={0.7}
-        onPress={onPress}
-        >
-            <Text style={styles.buttonText}>Add</Text>
-      </TouchableOpacity>
-    )
+  return (
+    <TouchableOpacity 
+    style={styles.button}
+    activeOpacity={0.7}
+    onPress={onPress}
+    >
+      <Text style={styles.buttonText}>Add</Text>
+    </TouchableOpacity>
+  )
 }
 
 const styles = StyleSheet.create({

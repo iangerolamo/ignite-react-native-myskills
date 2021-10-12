@@ -6,13 +6,13 @@ import {
 } from 'react-native';
 
 export function SkillCard({ skill }) {
-    return (
-        <TouchableOpacity key={skill} style={styles.buttonSkill}>
-            <Text style={styles.textSkill}>
-                {skill}
-            </Text>
-        </TouchableOpacity>
-    )
+  return (
+    <TouchableOpacity style={styles.buttonSkill}>
+      <Text style={styles.textSkill}>
+        {skill}
+      </Text>
+    </TouchableOpacity>
+  )
 }
 
 const styles = StyleSheet.create({

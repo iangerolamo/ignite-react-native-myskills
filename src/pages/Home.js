@@ -5,6 +5,7 @@ import {
     StyleSheet, 
     TextInput, 
     Platform,
+    FlatList
  } from 'react-native';
 
 import { Button } from '../components/Button';
@@ -34,16 +35,17 @@ export function Home() {
       <Button onPress={handleAddNewSkill} />
 
       <Text style={[styles.title, { marginVertical: 50}]}>
-          My Skills
+          My Skills!
       </Text>
 
-      {
-        mySkills.map(skill => (
-          <SkillCard skill={skill} />
-        ))
-      }
-      
-      
+      <FlatList 
+        data={mySkills}
+        keyExtractor={item => item}
+        renderItem={({ item }) => (
+          <SkillCard skill={item} />
+        )}
+      />
+
     </View>
 
   )
