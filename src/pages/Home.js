@@ -5,7 +5,7 @@ import {
     StyleSheet, 
     TextInput, 
     Platform,
-    FlatList
+    FlatList,
  } from 'react-native';
 
 import { Button } from '../components/Button';
@@ -22,7 +22,7 @@ export function Home() {
 
   useEffect(() => {
     const currentHour = new Date().getHours();
-    
+
     if (currentHour < 12) {
       setGretting('Good morning');
     }
@@ -31,7 +31,7 @@ export function Home() {
     } else {
       setGretting('Good night')
     }
-  }, [mySkills]);
+  }, []);
   
   return (
     <View style={styles.container}>
