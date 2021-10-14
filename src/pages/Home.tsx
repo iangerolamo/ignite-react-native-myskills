@@ -8,6 +8,8 @@ import {
     FlatList,
  } from 'react-native';
 
+ // Ctrl + m para ativar caixa de debug
+
 import { Button } from '../components/Button';
 import { SkillCard } from '../components/SkillCard';
 
